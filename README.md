@@ -14,4 +14,4 @@ A twitter bot written in Python and using the tweepy API that- based on another 
 `python3 bot.py`
 
 ## Don't believe it's working?
-Take a look over [here](https://twitter.com/sadcopycat) and find out yourself. :)
+Take a look over [here](https://twitter.com/radcopycat) and find out yourself. :)
