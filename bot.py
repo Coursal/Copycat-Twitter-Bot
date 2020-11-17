@@ -98,26 +98,10 @@ def generate_tweet(word_dictionary):
     return status
 
 
-# function that searches for mentions and responds with a generated tweet
-def reply_to_mentions(word_dictionary):
-    global last_seen_mention_id
-    
-    # scan for new mentions     
-    for tweet in tweepy.Cursor(api.mentions_timeline, since_id=last_seen_mention_id, tweet_mode="extended").items():
-        last_seen_mention_id = tweet.id
-
-        if tweet.user.screen_name != api.me().screen_name:
-            print('\nAWAKEN... GENERATING MENTION REPLY TO ' + tweet.user.screen_name + '...')
-            print('last seen mention ID: ' + str(last_seen_mention_id) + '\n')
-            api.update_status('@' + tweet.user.screen_name + ' ' + generate_tweet(word_dictionary), tweet.id)
-
-            
 while True:
     print("***************************************")
     print('creating the markov chain dictionary...')
     word_dictionary = markov()
-
-    reply_to_mentions(word_dictionary)
 
     # post randomly, once for every 150 tries
     if random.randint(1, 150) == 1:
