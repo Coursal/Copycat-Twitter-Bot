@@ -13,7 +13,6 @@ ACCESS_SECRET = "your_secret_access_key"
 USER_TO_COPY = "the_twitter_handle_of_the_account_you_want_to_copy_from"
 NUM_OF_TWEETS = 2000  # number of latest tweets to be read from the bot
 
-last_seen_mention_id = 1
 
 auth = tweepy.OAuthHandler(API_KEY, API_SECRET)
 auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
