@@ -1,6 +1,6 @@
 
 # Copycat Twitter Bot
-A twitter bot written in Python and using the tweepy API that- based on another account's tweets- generates its own random posts at random times and replies to every mention towards it.
+A twitter bot written in Python and using the tweepy API that- based on another account's tweets- generates its own random posts at random times.
 
 ## Preparations & Prerequisites
 * Owning a Twitter account (_duh_).
